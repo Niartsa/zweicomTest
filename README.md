@@ -1,5 +1,5 @@
 # Zweicom Test
-Este es un pipeline de Jenkins el cual contiene una integración con componentes AWS para la contrucción del proyecto (Un proyecto de .Net en ete caso.
+Este es un pipeline de Jenkins el cual (en su versión final) contiene una integración con componentes AWS para la contrucción del proyecto (Un proyecto de .Net en ete caso), con Github, con Octopus y con Artifactory.
 
 Pasos:
 
@@ -14,11 +14,12 @@ Pasos:
 5) Se procede a construir el proyecto utilizando MSBuild tool.
 
 Consideraciones:
+=================
 
-* Este pipeline esta montado sobre un SIC Jenkins que está montado sobre un servidor Linux, por lo que fue necesario la creación de una instancia EC2 basada en Windows para poder contruirlo utilizando herramientas Microsoft. Es por eso que se utiliza un nodo llamado "ec2node" el cuál es Windows based.
+* Este pipeline esta montado sobre un SIC Jenkins Cloudbees que está montado sobre un servidor Linux, por lo que fue necesario la creación de una instancia EC2 basada en Windows para poder contruirlo utilizando herramientas Microsoft. Es por eso que se utiliza un nodo llamado "ec2node" el cuál es Windows based.
 
 * Iba a colocarle integración con Artifactory, de hecho sería lo más lógico debido a como está pensado la arquitectura.
 
-* Falto la implemntación de envío de correos en caso de falla debido a tiempo.
+* Falto la implemntación de envío de correos en caso de falla debido a tiempo. También tiene integración con Octopus pero ese paso no se pudo implementar por falta de tiempo.
 
 * Como se puede ver, el archivo JenkinsFile está basado en Groovy.
